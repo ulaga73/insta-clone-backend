@@ -50,7 +50,7 @@ app.post("/postview", (req, res) => {
 
 app.get("/postview", async(req, res) => {
     try{
-        const data = await Post.find().sort({{$natural:-1}});
+        const data = await Post.find().sort({$natural:-1});
         res.status(200).json({
             status: "success",
             data
